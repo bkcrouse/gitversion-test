@@ -25,6 +25,9 @@ jobs:
       - name: Determine Version
         id:   gitversion
         uses: gittools/actions/gitversion/execute@v0.9.10
+        with:
+          ./.github/workflows/GitVersion.yml
+
 ########################################################################
 
 
