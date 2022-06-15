@@ -7,9 +7,10 @@
     <Nullable>enable</Nullable>
     <PackageId>GitVersionTest</PackageId>
     <Version>1.0.0</Version>
-    <Authors>your_name</Authors>
-    <Company>your_company</Company>
+    <Authors>BC</Authors>
+    <Company>azurebc.net</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/bkcrouse/gitversion-test</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
