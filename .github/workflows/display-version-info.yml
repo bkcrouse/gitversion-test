@@ -9,8 +9,6 @@ jobs:
   version:
     name: Version
     runs-on: ubuntu-latest
-    outputs:
-     semVer: ${{ steps.gitversion.outputs.semVer }}
 
     steps:
       - uses: actions/checkout@v2
