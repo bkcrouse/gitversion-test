@@ -2,7 +2,7 @@ assembly-informational-format: '{SemVer}'
 mode: Mainline
 branches:
   main:
-    regex: ^main$
+    regex: ^master$|^main$
     increment: Patch
     tag: ''
     prevent-increment-of-merged-branch-version: true
