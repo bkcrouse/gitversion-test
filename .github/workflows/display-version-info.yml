@@ -4,7 +4,7 @@ on:
     branches:
       - main # Default release branch, may also be named 'master' or 'develop'
       - develop
-      - initial
+      - feature/initial
     pull_request:
       branches: 
         - main
