@@ -1,27 +1,31 @@
 name: publish package to github
 on:
-  push:
-    branches:
-      - main # Default release branch, may also be named 'master' or 'develop'
-      - develop
-      - feature/initial
-    pull_request:
-      branches: 
-        - main
-        - develop
+  workflow_dispatch:
+
+
+########################################################################
 jobs:
-  build:
-    name: build
+  version:
+    name: Version
     runs-on: ubuntu-latest
+    outputs:
+     semVer: ${{ steps.gitversion.outputs.semVer }}
+
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.9.7
+        uses: gittools/actions/gitversion/setup@v0.9.10
         with:
           versionSpec: '5.x'
 
       - name: Determine Version
         id:   gitversion
-        uses: gittools/actions/gitversion/execute@v0.9.7
+        uses: gittools/actions/gitversion/execute@v0.9.10
+########################################################################
+
 
       # - name: Display GitVersion outputs
       #   run: |
