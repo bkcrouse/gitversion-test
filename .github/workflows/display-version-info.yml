@@ -25,7 +25,7 @@ jobs:
         uses: gittools/actions/gitversion/execute@v0.9.10
         with:
           useConfigFile: true
-          ConfigFilePath: ./.github/workflows/GitVersion.yml
+          ConfigFilePath: ./GitVersion.yml
 
       - name: Display GitVersion outputs
         run: |
